@@ -1,0 +1,21 @@
+<p><strong>{{ estaEditando() ? 'Edição' : 'Cadastro' }} de Funcionario</strong></p>
+<form [formGroup]="formFuncionario" (ngSubmit)="enviar()">
+  <div class="mb-3">
+    <label for="name" class="form-label">Nome</label>
+    <input type="text" class="form-control" id="name" formControlName="name">
+  </div>
+  <div class="mb-3">
+    <label for="cpf" class="form-label">CPF</label>
+    <input type="text" class="form-control" id="cpf" formControlName="cpf">
+  </div>
+  <div class="mb-3">
+    <label for="email" class="form-label">email</label>
+    <input type="text" class="form-control" id="email" formControlName="email">
+  </div>
+  <div class="mb-3">
+    <label for="obs" class="form-label">Observações</label>
+    <textarea id="obs" rows="3" class="form-control" formControlName="obs"></textarea>
+  </div>
+  <button [disabled]="!formFuncionario.valid" type="submit" class="btn btn-primary">Enviar</button>
+</form>
+

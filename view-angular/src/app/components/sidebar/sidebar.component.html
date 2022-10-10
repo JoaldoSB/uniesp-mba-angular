@@ -1,0 +1,17 @@
+<p></p>
+<nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="http://localhost:4200/home">
+      <i class="fas fa-user-friends"></i> | página inicial
+    </a>
+    <div class="btn-group">
+      <button type="button" class="btn btn-dark dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+        Opções
+      </button>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" [routerLink]= "['funcionario']" >Lista de Funcionarios</a></li>
+        <li><a class="dropdown-item" [routerLink]= "['funcionario/cadastrar']">Cadastrar Funcionario</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
